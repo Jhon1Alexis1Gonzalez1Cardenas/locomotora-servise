@@ -26,8 +26,8 @@ public class LocomotoraServiceImpl implements ILocomotoraService {
     }
 
     @Override
-    public Locomotora findById(Locomotora locomotora) {
-        return locomotoraRepository.findById(locomotora.getId()).orElse(null);
+    public Locomotora findById(long id) {
+        return locomotoraRepository.findById(id).orElse(null);
     }
 
     @Override
