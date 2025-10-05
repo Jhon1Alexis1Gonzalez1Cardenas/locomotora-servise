@@ -1,5 +1,5 @@
-INSERT INTO Locomotora (id, modelo, fabricante, anio_fabricacion, tipo_combustible, potencia, estado) values (1, 'Modelo A', 'Fabricante X', 2010, 'Diesel', 3000, 'Operativa');
-INSERT INTO Locomotora (id, modelo, fabricante, anio_fabricacion, tipo_combustible, potencia, estado) values (2, 'Modelo B', 'Fabricante Y', 2015, 'Electrica', 4000, 'En Mantenimiento');
-INSERT INTO Locomotora (id, modelo, fabricante, anio_fabricacion, tipo_combustible, potencia, estado) values (3, 'Modelo C', 'Fabricante Z', 2018, 'Hibrida', 3500, 'Operativa');
-INSERT INTO Locomotora (id, modelo, fabricante, anio_fabricacion, tipo_combustible, potencia, estado) values (4, 'Modelo D', 'Fabricante X', 2020, 'Diesel', 4500, 'Operativa');
-INSERT INTO Locomotora (id, modelo, fabricante, anio_fabricacion, tipo_combustible, potencia, estado) values (5, 'Modelo E', 'Fabricante Y', 2012, 'Electrica', 3200, 'En Mantenimiento');
+INSERT INTO Locomotora (modelo, fabricante, anio_fabricacion, tipo_combustible, potencia, estado) values ('Modelo A', 'Fabricante X', 2010, 'Diesel', 3000, 'Operativa');
+INSERT INTO Locomotora (modelo, fabricante, anio_fabricacion, tipo_combustible, potencia, estado) values ('Modelo B', 'Fabricante Y', 2015, 'Electrica', 4000, 'En Mantenimiento');
+INSERT INTO Locomotora (modelo, fabricante, anio_fabricacion, tipo_combustible, potencia, estado) values ('Modelo C', 'Fabricante Z', 2018, 'Hibrida', 3500, 'Operativa');
+INSERT INTO Locomotora (modelo, fabricante, anio_fabricacion, tipo_combustible, potencia, estado) values ('Modelo D', 'Fabricante X', 2020, 'Diesel', 4500, 'Operativa');
+INSERT INTO Locomotora (modelo, fabricante, anio_fabricacion, tipo_combustible, potencia, estado) values ( 'Modelo E', 'Fabricante Y', 2012, 'Electrica', 3200, 'En Mantenimiento');

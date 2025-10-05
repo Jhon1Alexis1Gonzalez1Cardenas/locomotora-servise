@@ -37,7 +37,7 @@ public class Locomotora {
     @Column(nullable = false)
     private String tipoCombustible;
 
-    @Min(value = 6000, message = "La potencia debe ser mayor o igual a 6000 caballos de fuerza")
+    @Min(value = 800, message = "La potencia debe ser mayor o igual a 6000 caballos de fuerza")
     @NotNull(message = "El campo potencia no puede estar vacio")
     @Column(nullable = false)
     private int potencia;
