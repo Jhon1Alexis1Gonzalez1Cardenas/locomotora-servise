@@ -5,6 +5,10 @@ import com.edu.uceva.locomotoraservise.model.entities.Locomotora;
 import com.edu.uceva.locomotoraservise.model.services.ILocomotoraService;
 import com.edu.uceva.locomotoraservise.model.services.LocomotoraServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -45,5 +49,11 @@ public class LocomotoraController {
         return iLocomotoraService.findById(id);
     }
 
+    @GetMapping("/Locomotoras/page/{page}")
+    public ResponseEntity<Page<Locomotora>> getLocomotorasPaginated(@PathVariable Integer page) {
+        Pageable pageable = PageRequest.of(page, 4); // 4 elementos por página
+        Page<Locomotora> locomotoraPage = iLocomotoraService.findAll(pageable);
+        return ResponseEntity.ok(locomotoraPage);
+    }
 
 }
