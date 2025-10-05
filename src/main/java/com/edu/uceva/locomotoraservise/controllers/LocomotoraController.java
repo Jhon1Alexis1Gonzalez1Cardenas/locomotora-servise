@@ -4,12 +4,14 @@ package com.edu.uceva.locomotoraservise.controllers;
 import com.edu.uceva.locomotoraservise.model.entities.Locomotora;
 import com.edu.uceva.locomotoraservise.model.services.ILocomotoraService;
 import com.edu.uceva.locomotoraservise.model.services.LocomotoraServiceImpl;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -46,7 +48,14 @@ public class LocomotoraController {
    /* public Locomotora save(@RequestBody Locomotora locomotora) {
         return iLocomotoraService.save(locomotora);
     }*/
-    public ResponseEntity<Map<String, Object>> save(@RequestBody Locomotora locomotora) {
+    public ResponseEntity<Map<String, Object>> save(@Valid @RequestBody Locomotora locomotora, BindingResult result) {
+        if (result.hasErrors()) {
+            Map<String, Object> response = new HashMap<>();
+            response.put("error", "Error de validación");
+            response.put("errores", result.getFieldErrors());
+            return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+        }
+
         Map<String, Object> response = new HashMap<>();
         Locomotora nuevaLocomotora = iLocomotoraService.save(locomotora);
         response.put(MENSAJE, "Locomotora creada con éxito");
@@ -58,7 +67,13 @@ public class LocomotoraController {
     /*public void delete(@RequestBody Locomotora locomotora) {
         iLocomotoraService.delete(locomotora);
     }*/
-    public ResponseEntity<Map<String, Object>> delete(@RequestBody Locomotora locomotora) {
+    public ResponseEntity<Map<String, Object>> delete(@Valid @RequestBody Locomotora locomotora, BindingResult result) {
+        if (result.hasErrors()) {
+            Map<String, Object> response = new HashMap<>();
+            response.put("error", "Error de validación");
+            response.put("errores", result.getFieldErrors());
+            return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+        }
         Map<String, Object> response = new HashMap<>();
         iLocomotoraService.delete(locomotora);
         response.put(MENSAJE, "Locomotora eliminada con éxito");
@@ -69,7 +84,13 @@ public class LocomotoraController {
     /*public Locomotora update(@RequestBody Locomotora locomotora) {
         return  iLocomotoraService.update(locomotora);
     }*/
-    public ResponseEntity<Map<String, Object>> update(@RequestBody Locomotora locomotora) {
+    public ResponseEntity<Map<String, Object>> update(@Valid @RequestBody Locomotora locomotora, BindingResult result) {
+        if (result.hasErrors()) {
+            Map<String, Object> response = new HashMap<>();
+            response.put("error", "Error de validación");
+            response.put("errores", result.getFieldErrors());
+            return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+        }
         Map<String, Object> response = new HashMap<>();
         Locomotora locomotoraActualizada = iLocomotoraService.update(locomotora);
         response.put(MENSAJE, "Locomotora actualizada con éxito");
