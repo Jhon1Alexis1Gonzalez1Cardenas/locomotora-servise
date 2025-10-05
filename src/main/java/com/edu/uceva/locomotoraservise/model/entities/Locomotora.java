@@ -11,7 +11,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class locomotora {
+public class Locomotora {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

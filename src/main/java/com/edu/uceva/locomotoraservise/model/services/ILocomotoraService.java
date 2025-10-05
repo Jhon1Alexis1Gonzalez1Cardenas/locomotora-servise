@@ -1,12 +1,12 @@
 package com.edu.uceva.locomotoraservise.model.services;
 
-import com.edu.uceva.locomotoraservise.model.entities.locomotora;
+import com.edu.uceva.locomotoraservise.model.entities.Locomotora;
 import java.util.List;
 
 public interface ILocomotoraService {
-    locomotora save(locomotora locomotora);
-    void delete(locomotora locomotora);
-    locomotora findById(locomotora locomotora);
-    locomotora update(locomotora locomotora);
-    List<locomotora> findAll();
+    Locomotora save(Locomotora locomotora);
+    void delete(Locomotora locomotora);
+    Locomotora findById(Locomotora locomotora);
+    Locomotora update(Locomotora locomotora);
+    List<Locomotora> findAll();
 }
