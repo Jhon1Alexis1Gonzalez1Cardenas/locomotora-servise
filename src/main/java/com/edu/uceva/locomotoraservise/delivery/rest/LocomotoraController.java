@@ -1,9 +1,8 @@
-package com.edu.uceva.locomotoraservise.controllers;
+package com.edu.uceva.locomotoraservise.delivery.rest;
 
 
-import com.edu.uceva.locomotoraservise.model.entities.Locomotora;
-import com.edu.uceva.locomotoraservise.model.services.ILocomotoraService;
-import com.edu.uceva.locomotoraservise.model.services.LocomotoraServiceImpl;
+import com.edu.uceva.locomotoraservise.domain.model.Locomotora;
+import com.edu.uceva.locomotoraservise.domain.service.ILocomotoraService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

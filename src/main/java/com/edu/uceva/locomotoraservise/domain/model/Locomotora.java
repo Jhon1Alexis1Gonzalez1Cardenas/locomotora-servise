@@ -1,4 +1,4 @@
-package com.edu.uceva.locomotoraservise.model.entities;
+package com.edu.uceva.locomotoraservise.domain.model;
 
 
 import jakarta.persistence.*;

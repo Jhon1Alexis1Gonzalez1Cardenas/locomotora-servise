@@ -1,8 +1,8 @@
-package com.edu.uceva.locomotoraservise.model.services;
+package com.edu.uceva.locomotoraservise.domain.service;
 
 
-import com.edu.uceva.locomotoraservise.model.entities.Locomotora;
-import com.edu.uceva.locomotoraservise.model.repositories.ILocomotoraRepository;
+import com.edu.uceva.locomotoraservise.domain.model.Locomotora;
+import com.edu.uceva.locomotoraservise.domain.repository.ILocomotoraRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;

@@ -1,8 +1,7 @@
-package com.edu.uceva.locomotoraservise.model.repositories;
+package com.edu.uceva.locomotoraservise.domain.repository;
 
-import com.edu.uceva.locomotoraservise.model.entities.Locomotora;
+import com.edu.uceva.locomotoraservise.domain.model.Locomotora;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
